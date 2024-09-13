@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing Page for XYZ product or service">
+    <meta name="keywords" content="landing page, XYZ product, features, call to action">
+    <meta name="author" content="Your Name">
+    <title>Your Landing Page</title>
+    <style>
+        /* Universal Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: url('m11.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Overlay to make content more readable */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: -1;
+        }
+
+        /* Main Content Styling */
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            background-color: #023e8a;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0077b6;
+        }
+
+        /* Features Section */
+        #features {
+            padding: 80px 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            border-radius: 8px;
+            margin: 50px auto;
+            max-width: 1200px;
+        }
+
+        #features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #023e8a;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .feature {
+            flex: 1;
+            max-width: 300px;
+            padding: 20px;
+            background-color: #edf2f4;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #023e8a;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Call to Action */
+        #cta {
+            padding: 100px 20px;
+            background-color: rgba(0, 119, 182, 0.9);
+            text-align: center;
+            color: white;
+            border-radius: 8px;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        #cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        form input {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+            width: 250px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #023e8a;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background-color: #48cae4;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            background-color: rgba(2, 62, 138, 0.9);
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            .feature-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>Welcome to Jarvis</h1>
+            <p>Discover our amazing features and services</p>
+            <a href="#cta" class="cta-button">Get Started</a>
+        </header>
+
+        <section id="features">
+            <h2>Our Features</h2>
+            <div class="feature-container">
+                <div class="feature">
+                    <h3>Feature 1</h3>
+                    <p>AI-Powered Automation.</p>
+                </div>
+                <div class="feature">
+                    <h3>Feature 2</h3>
+                    <p>Advanced Analytics.</p>
+                </div>
+                <div class="feature">
+                    <h3>Feature 3</h3>
+                    <p>Seamless Integration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta">
+            <h2>Join Us Today!</h2>
+            <p>Subscribe to stay updated with the latest news and offers.</p>
+            <form  method="post">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; Jarvis 2024</p>
+        </footer>
+    </main>
+
+    <script>
+        // Smooth scrolling when clicking on anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
